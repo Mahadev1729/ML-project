@@ -1,0 +1,6 @@
+[2026-03-25 21:58:36,040] C:\Users\Mahadev Athani\anaconda3\Lib\site-packages\numexpr\utils.py:148 INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+[2026-03-25 21:58:36,040] C:\Users\Mahadev Athani\anaconda3\Lib\site-packages\numexpr\utils.py:160 INFO - NumExpr defaulting to 8 threads.
+[2026-03-25 21:58:41,496] f:\My projects\ml_project\src\components\data_ingestion.py:21 INFO - entered the data ingestion method or component
+[2026-03-25 21:58:41,525] f:\My projects\ml_project\src\components\data_ingestion.py:24 INFO - read the dataset as dataframe
+[2026-03-25 21:58:41,534] f:\My projects\ml_project\src\components\data_ingestion.py:27 INFO - Train test split inited
+[2026-03-25 21:58:41,554] f:\My projects\ml_project\src\components\data_ingestion.py:31 INFO - Ingestion of data is failed
