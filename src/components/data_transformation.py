@@ -18,6 +18,10 @@ class DataTransformation:
         def __init__(self):
             self.Data_Transformation_Config=DataTransformationConfig()
         def get_data_transformer_object(self):
+            '''
+            This function is responsible for data transformation 
+            '''
+            
             try:
                 numerical_features=['writing score','reading score']
                 cat_features=['gender',
@@ -26,8 +30,31 @@ class DataTransformation:
                     'lunch',
                     'test preparation course'
                     ]
-            except:
-                pass
+                
+                num_pipeline=Pipeline(
+                    steps=[
+                        ("imputer",SimpleImputer(strategy="median")),
+                        ("scaler",StandardScaler())
+                    ]
+                )
+                cat_pipeline=Pipeline(
+                    steps=[
+                        ("imputer",SimpleImputer(strategy="most_frequent")),
+                        ("one_hot_encoder",OneHotEncoder()),
+                        ("scaling",StandardScaler())
+                    ]
+                )
+                logging.info(f"Categerical columns:{cat_features}")
+                logging.info(f"numrical columns:{numerical_features}")
+                preprocessor=ColumnTransformer(
+                    [
+                        ("num_pipeline",num_pipeline,numerical_features),
+                        ("cat_pipeline",cat_pipeline,cat_features)
+                    ]
+                )
+                return preprocessor
+            except Exception as e:
+                raise CustomException(e,sys)
             
                 
             
