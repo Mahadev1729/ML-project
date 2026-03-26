@@ -1,0 +1,2 @@
+[2026-03-26 17:05:53,494] C:\Users\Mahadev Athani\anaconda3\Lib\site-packages\numexpr\utils.py:148 INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+[2026-03-26 17:05:53,496] C:\Users\Mahadev Athani\anaconda3\Lib\site-packages\numexpr\utils.py:160 INFO - NumExpr defaulting to 8 threads.
